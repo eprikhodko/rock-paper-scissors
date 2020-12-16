@@ -34,7 +34,7 @@ function game() {
       if (playerSelection === computerSelection) {
         return "Draw!";
       } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-        return "You Lose! Paper beats Rock";
+        return "You Lose! Paper beats Rock" + " smth" + playerScore + ":" + computerScore;
       } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
         return "You Win! Rock beats Scissors";
       } else if (playerSelection === "Paper" && computerSelection === "Rock") {
@@ -71,4 +71,4 @@ function game() {
 
 
 
-// game();
+game();

@@ -34,17 +34,23 @@ function game() {
       if (playerSelection === computerSelection) {
         return "Draw!";
       } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-        return "You Lose! Paper beats Rock";
+        computerScore++;
+        return "You Lose! Paper beats Rock!" + " Player vs PC = " + playerScore + ":" + computerScore;
       } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-        return "You Win! Rock beats Scissors";
+        playerScore++;
+        return "You Win! Rock beats Scissors!" + " Player vs PC = " + playerScore + ":" + computerScore;
       } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        return "You Win! Paper beats Rock";
+        playerScore++;
+        return "You Win! Paper beats Rock!" + " Player vs PC = " + playerScore + ":" + computerScore;
       } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-        return "You Lose! Scissors beats Paper";
+        computerScore++;
+        return "You Lose! Scissors beats Paper!" + " Player vs PC = " + playerScore + ":" + computerScore;
       } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-        return "You Lose! Rock beats Scissors";
+        computerScore++;
+        return "You Lose! Rock beats Scissors!" + " Player vs PC = " + playerScore + ":" + computerScore;
       } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-        return "You Win! Scissors beats Paper";
+        playerScore++;
+        return "You Win! Scissors beats Paper!" + " Player vs PC = " + playerScore + ":" + computerScore;
       }
     }
 
@@ -63,12 +69,17 @@ function game() {
 // your program should keep score and print it to the console.log
 
 // if player win, give him a score and print "Player vs PC = 1:0"
+let computerScore = 0;
+let playerScore = 0;
+// if player win, playerScore++ and print "Player vs PC = 1:0"
+// if player win, playerScore++, console.log(playerScore)
 // if computer win, give him a score and print "Player vs PC = 0:1"
 // if it is a draw, print "Draw!"
 
+// and now I need to add a message at the end which tells us who is winner at the game.
 
 
 
 
 
-// game();
+game();
