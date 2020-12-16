@@ -46,3 +46,5 @@ function playRound(playerSelection, computerSelection) {
 }
 
 console.log(playRound(playerSelection, computerSelection));
+
+//test comment for commit
