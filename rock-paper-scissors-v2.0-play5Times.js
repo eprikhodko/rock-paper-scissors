@@ -1,11 +1,19 @@
-// declare an array of game items
+// welcome! 
+// this program plays rock-paper-scissors game with a Player and Computer
+// lets begin!
+
+// declare an array of rock-paper-scissors game items
 const items = ["Rock", "Paper", "Scissors"];
+
+ // set player score and computer score to 0 at the beginning of a game
+ let computerScore = 0;
+ let playerScore = 0;
 
 // play game 5 times
 function game() {
   for (let i = 0; i < 5; i++) {
 
-    // ask user for input and make it lowercase
+    // ask user for an input and make it lowercase
     let playerSelection = prompt("rock, paper, or scissors? Which one you choose?").toLowerCase();
 
     // capitalize first letter of user input string
@@ -21,7 +29,7 @@ function game() {
     // declare computerSelection variable
     let computerSelection = computerPlay();
 
-    // random item selecting by computer from an [items] array
+    // random item selecting by computer from an [items] array, which are ["Rock", "Paper", "Scissors"]
     function computerPlay() {
       const randomItem = Math.floor(Math.random() * items.length);
       return items[randomItem];
@@ -29,14 +37,17 @@ function game() {
 
     // log an item choosed by computer to the console
     console.log(computerSelection + "(PC)");
-    // play round of a game
+
+    // play single round of a game between player and computer
     function playRound(playerSelection, computerSelection) {
       if (playerSelection === computerSelection) {
         return "Draw!";
       } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+        // give a score to the computer
         computerScore++;
         return "You Lose! Paper beats Rock!" + " Player vs PC = " + playerScore + ":" + computerScore;
       } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
+        // give a score to the player
         playerScore++;
         return "You Win! Rock beats Scissors!" + " Player vs PC = " + playerScore + ":" + computerScore;
       } else if (playerSelection === "Paper" && computerSelection === "Rock") {
@@ -72,27 +83,10 @@ if (playerScore > computerScore) {
 
 }
 
-// Write a NEW function called game(). Use the previous function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end.
+// set player score and computer score to 0 at the beginning of a game
+// this variables placed here for an example. They can exist at the end of the program and still it will run fine. Interesting! Uncomment those two variables below and comment those two at the beginning of program to see that everything still work fine.
+// let computerScore = 0;
+// let playerScore = 0;
 
-// Write a NEW function called game(). Use the previous function inside of this one to play a round of game. 
-// function game() should keep score and reports a winner or loser at the end to the console.log
-
-// your program should keep score and reports a winner or loser at the end to the console.log
-
-// your program should keep score and print it to the console.log
-
-// if player win, give him a score and print "Player vs PC = 1:0"
-let computerScore = 0;
-let playerScore = 0;
-// if player win, playerScore++ and print "Player vs PC = 1:0"
-// if player win, playerScore++, console.log(playerScore)
-// if computer win, give him a score and print "Player vs PC = 0:1"
-// if it is a draw, print "Draw!"
-
-// and now I need to add a message at the end which tells us who is winner at the game.
-
-
-
-
-
+// call a function game() that will play rock-paper-scissors game for 5 times.
 game();
