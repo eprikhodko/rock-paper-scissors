@@ -5,25 +5,30 @@ body {
   font-family: 'Walter Turncoat', cursive;
    }
 
-.flex-image-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-}
-
 .hands { 
-  max-width:45%;
-  margin: 0px 0px 0px 0px;
-  background-color: black;
+  max-width:50%;
+  margin: 20px 0px 0px 0px;
+  /* background-color: black; */
 }
 
-.text-round {
-  font-size: 320%;
-  text-align: center;
-  background-color: darkgreen;
+.hand-left {
+  float: left;
+  margin-left: -115px;
+  /* background-color: rgb(37, 54, 206); */
+}
 
-  margin: 0px;
+.hand-right {
+  float: right;
+  /* margin-right: -115px; */
+  /* background-color: rgb(37, 206, 155); */
+}
+
+.text-round-count {
+  font-size: 350%;
+  text-align: center;
+  /* background-color: darkgreen; */
+
+  margin: 20px 0px 0px 0px;
 }
 
 ul {
@@ -32,13 +37,13 @@ ul {
   padding: 0;
   overflow: hidden;
   /* fullwidth background color */
-  background-color: darkred;
+  /* background-color: darkred; */
 }
 
 li {
   display: block;
-  padding: 8px;
-  font-size: 150%;
+  padding: 0px 50px 0px 50px;
+  font-size: 180%;
 }
 
 .li-left {
@@ -49,3 +54,25 @@ li {
   float: right;
 }
 
+.test-div {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+}
+
+.wrapper-div {
+  overflow: hidden;
+  position: relative;
+
+  background-color: red;
+}
+
+.inner-div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+
+  margin-right: -500px;
+
+  background-color: black;
+}
