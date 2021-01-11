@@ -18,20 +18,25 @@ body {
   margin: 0px 0px 0px 0px;
   /* padding: 0px -50px 0px -100px; */
   /* flex-shrink: 2; */
-  /* background-color: black; */
+  background-color: black;
 }
 
 .text-round {
   font-size: 320%;
   text-align: center;
+  background-color: darkgreen;
 }
 
 .text-player-score {
   font-size: 150%;
   text-align: left;
+  margin: 0;
+  background-color: chocolate;
 }
 
 .text-computer-score {
   font-size: 150%;
   text-align: right;
+  margin: 0;
+  background-color: rgb(189, 30, 210);
 }
