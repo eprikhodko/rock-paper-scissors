@@ -8,3 +8,5 @@ break it down, just break it all down.
 I need to layout player and computer in one line.
 so its some kind of a header model.
 I can make it as simple as I could and see what happens.
+
+So lets begin to work.
