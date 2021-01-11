@@ -13,11 +13,8 @@ body {
 }
 
 .hands { 
-  /* width: 350px; */
   max-width:45%;
   margin: 0px 0px 0px 0px;
-  /* padding: 0px -50px 0px -100px; */
-  /* flex-shrink: 2; */
   background-color: black;
 }
 
@@ -25,18 +22,30 @@ body {
   font-size: 320%;
   text-align: center;
   background-color: darkgreen;
+
+  margin: 0px;
 }
 
-.text-player-score {
-  font-size: 150%;
-  text-align: left;
+ul {
+  list-style-type: none;
   margin: 0;
-  background-color: chocolate;
+  padding: 0;
+  overflow: hidden;
+  /* fullwidth background color */
+  background-color: darkred;
 }
 
-.text-computer-score {
+li {
+  display: block;
+  padding: 8px;
   font-size: 150%;
-  text-align: right;
-  margin: 0;
-  background-color: rgb(189, 30, 210);
 }
+
+.li-left {
+  float: left;
+}
+
+.li-right {
+  float: right;
+}
+
