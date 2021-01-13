@@ -6,48 +6,52 @@ html {
   box-sizing: inherit;
 }
 
+/* body section */
 body {
   background-color: #f68583;
   margin: 0;
   padding: 0;
   font-family: 'Walter Turncoat', cursive;
-   }
+ }
 
-.hands { 
-  /* max-width:100%; */
-  margin: 20px 0px 0px 0px;
-  /* background-color: black; */
+ /* content styling */
+ /* ----------------------------------------------- */
+ /* first block, current Round styling */
+ .text-round-count {
+   font-size: 350%;
+   text-align: center;
+   background-color: darkgreen;
+   margin: 20px 0px 0px 0px;
 }
 
-.hand-left-container {
-  float: left;
-  margin-left: -115px;
-  background-color: rgb(37, 54, 206);
+/* Player and Computer score styling */
+.text-count-flex-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: blueviolet;
+  margin: 0px 20px 0px 20px;
+  font-size: 150%;
 }
 
-.hand-right-container {
-  float: right;
-  /* if we decide to leave negative margin it will cause horizontal scroll, because overflow: hidden apply for a child container, not for a parent. And this is a parent container for an image */
-  /* margin-right: -115px; */
+/* left and right hands styling */
+
+.hands-flex-container {
+  display: flex;
+  background-color: cadetblue;
+  justify-content: space-between;
   overflow: hidden;
-  background-color: rgb(37, 206, 155);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .hand-left-img {
-  max-width: 100%;
+  max-width: 400px;
+  margin-left: -50px;
 }
 
 .hand-right-img {
-  max-width: 1000px;
+  max-width: 400px;
   margin-right: -50px;
-}
-
-.text-round-count {
-  font-size: 350%;
-  text-align: center;
-  /* background-color: darkgreen; */
-
-  margin: 20px 0px 0px 0px;
 }
 
 ul {
@@ -56,7 +60,7 @@ ul {
   padding: 0;
   overflow: hidden;
   /* fullwidth background color */
-  /* background-color: darkred; */
+  background-color: darkred;
 }
 
 li {
@@ -75,25 +79,28 @@ li {
   margin-right: 20px;
 }
 
-.test-div {
-  background-color: black;
-  width: 100px;
-  height: 100px;
+.hands { 
+  /* max-width:100%; */
+  margin: 20px 0px 0px 0px;
+  /* background-color: black; */
 }
 
-.wrapper-div {
+.hand-left-container {
+  float: left;
+  margin-left: -115px;
+  /* background-color: rgb(37, 54, 206); */
+}
+
+.hand-right-container {
+  float: right;
+  /* if we decide to leave negative margin it will cause horizontal scroll, because overflow: hidden apply for a child container, not for a parent. And this is a parent container for an image */
+  /* margin-right: -115px; */
   overflow: hidden;
-  position: relative;
-
-  background-color: red;
+  /* background-color: rgb(37, 206, 155); */
 }
 
-.inner-div {
-  position: absolute;
-  width: 200px;
-  height: 200px;
 
-  margin-right: -500px;
 
-  background-color: black;
-}
+
+
+
