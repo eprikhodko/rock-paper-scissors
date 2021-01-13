@@ -2,6 +2,32 @@
 // this program plays rock-paper-scissors game with a Player and Computer
 // lets begin!
 
+// DOM part
+/////////////////////////////////////////////////
+// add event listeners to image buttons
+/////////////////////////////////////////////////
+// select image and store selected image in a variable
+let buttonRock = document.getElementById("button-rock");
+// add event listener to the rock image
+buttonRock.addEventListener("click", function() {
+  console.log("rock button click is working!");
+});
+
+let buttonPaper = document.getElementById("button-paper");
+// add event listener to the paper image
+buttonPaper.addEventListener("click", function() {
+  console.log("paper button click is working!");
+});
+
+let buttonScissors = document.getElementById("button-scissors");
+// add event listener to the paper image
+buttonScissors.addEventListener("click", function() {
+  console.log("scissors button click is working!");
+});
+
+
+
+
 // declare an array of rock-paper-scissors game items
 const items = ["Rock", "Paper", "Scissors"];
 
