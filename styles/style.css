@@ -1,5 +1,6 @@
 /* Use alternative box model */
 html {
+  font-size: 10px;
   box-sizing: border-box;
 }
 *, *::before, *::after {
@@ -18,7 +19,7 @@ body {
  /* ----------------------------------------------- */
  /* first block, current Round styling */
  .text-round-count {
-   font-size: 350%;
+   font-size: 7rem;
    text-align: center;
    margin: 20px 0px 0px 0px;
    /* background-color: darkgreen; */
@@ -28,8 +29,8 @@ body {
 .text-count-flex-container {
   display: flex;
   justify-content: space-between;
-  margin: 0px 20px 0px 20px;
-  font-size: 150%;
+  margin: 0px 50px 10px 50px;
+  font-size: 3rem;
   /* background-color: blueviolet; */
 }
 
