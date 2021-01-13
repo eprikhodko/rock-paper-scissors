@@ -20,28 +20,27 @@ body {
  .text-round-count {
    font-size: 350%;
    text-align: center;
-   background-color: darkgreen;
    margin: 20px 0px 0px 0px;
+   /* background-color: darkgreen; */
 }
 
 /* Player and Computer score styling */
 .text-count-flex-container {
   display: flex;
   justify-content: space-between;
-  background-color: blueviolet;
   margin: 0px 20px 0px 20px;
   font-size: 150%;
+  /* background-color: blueviolet; */
 }
 
 /* left and right hands styling */
 
 .hands-flex-container {
   display: flex;
-  background-color: cadetblue;
   justify-content: space-between;
   overflow: hidden;
-  margin-left: 20px;
-  margin-right: 20px;
+  /* margin: 0px 20px 0px 20px; */
+  /* background-color: cadetblue; */
 }
 
 .hand-left-img {
@@ -56,7 +55,22 @@ body {
   margin-right: -120px;
 } 
 
+/* hands bottom styling */
 
+.hands-bottom-flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  position: fixed;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%);
+  /* background-color: burlywood; */
+}
+
+.hands-bottom {
+  max-width: 80px;
+}
 
 
 
