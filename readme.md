@@ -15,3 +15,9 @@ what I need to do?
 I need to remove colored backgrounds from my boxes temporary and check existing layout in fullscreen from my laptop. Is everything is ok?
 
 
+ну что, ты понял тогда что делать?
+просто верстаем статику тогда пока. 
+потом уже будем ее переводить в адаптивный дизайн
+просто статику под экран ноутбука. 
+потом все остальное
+
