@@ -46,58 +46,15 @@ body {
 
 .hand-left-img {
   max-width: 400px;
-  margin-left: -50px;
+  /* max-width: 400px; */
+  margin-left: -120px;
 }
 
 .hand-right-img {
   max-width: 400px;
-  margin-right: -50px;
+  /* max-width: 400px; */
+  margin-right: -120px;
 } 
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  /* fullwidth background color */
-  background-color: darkred;
-}
-
-li {
-  display: block;
-  padding: 0px;
-  font-size: 180%;
-}
-
-.li-left {
-  float: left;
-  margin-left: 20px;
-}
-
-.li-right {
-  float: right;
-  margin-right: 20px;
-}
-
-.hands { 
-  /* max-width:100%; */
-  margin: 20px 0px 0px 0px;
-  /* background-color: black; */
-}
-
-.hand-left-container {
-  float: left;
-  margin-left: -115px;
-  /* background-color: rgb(37, 54, 206); */
-}
-
-.hand-right-container {
-  float: right;
-  /* if we decide to leave negative margin it will cause horizontal scroll, because overflow: hidden apply for a child container, not for a parent. And this is a parent container for an image */
-  /* margin-right: -115px; */
-  overflow: hidden;
-  /* background-color: rgb(37, 206, 155); */
-}
 
 
 
