@@ -43,3 +43,13 @@ I need to remove colored backgrounds from my boxes temporary and check existing 
 Можно анжелу посмотреть или андрея. Перечитать урок по дому одина. 
 И повесить ивент лисенеры на все кнопки и проверить их и начать работу. и каунт чтобы шел сначала в консоль а потом в плеер и компьютер скор.
 Для теста. Надо проверить что все работает, весь интерфейс.
+
+if user clicked "rock-button" then let playerSelection === "rock"
+else if user clicked "paper-button" then let playerSelection === "paper"
+else if user clicked "scissors-button" then let playerSelection === "scissors"
+
+и надо сначала ждать инпута от юзера. Ждать пока он кликнет, и после этого уже запускать игру.
+
+если что Андрея еще посмотри, у него наверное есть инфа далее по дому.
+
+мне бы сайт все таки хороший... и написать может его самому... долго это все правда очень.
