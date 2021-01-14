@@ -8,45 +8,56 @@ const items = ["Rock", "Paper", "Scissors"];
 // set player score and computer score to 0 at the beginning of a game
 let computerScore = 0;
 let playerScore = 0;
+let roundScore = 0;
 
-// DOM part
-/////////////////////////////////////////////////
+// select player, computer, and current round score in DOM
+
+let playerScreenScore = document.getElementById("player-score");
+let computerScreenScore = document.getElementById("computer-score");
+let roundScreenScore = document.getElementById("round-count");
+
+
 // add event listeners to image buttons
-/////////////////////////////////////////////////
-let playerSelection = "currentlyEmpty";
-// select image and store selected image in a variable
-let buttonRock = document.getElementById("button-rock");
-// add event listener to the rock image
-// and what happens here? We add event listener to the rock button image. When user click at image, function fires. 
-// first of all it assigns player selected hand to the playerSelection variable. 
-// next we declare computerSelection variable
-// next computer choose its sign too
 
+let playerSelection = "currentlyEmpty";
+
+// select image and store assosiated value in a variable
+let buttonRock = document.getElementById("button-rock");
+
+// add event listener to the rock image 
 buttonRock.addEventListener("click", function() {
+// after we clicked a button will happen this:
+// assign correspond value to the variable playerSelection after we clicked at image
   playerSelection = "Rock";
-   // declare computerSelection variable
+
+// after player made his choise, let computer make its choice too
+  // declare computerSelection variable
    let computerSelection = computerPlay();
 
-   // random item selecting by computer from an [items] array, which are ["Rock", "Paper", "Scissors"]
+   // random item select by computer from an [items] array, which are ["Rock", "Paper", "Scissors"]
    function computerPlay() {
      const randomItem = Math.floor(Math.random() * items.length);
      return items[randomItem];
    }
-  console.log(playRound(playerSelection, computerSelection));
-});
-///////////////////////////////
-// buttonRock.addEventListener("click", function () {
-//   logIt();
-// })
 
-// function logIt() {
-//   // console.log("clicked");
-//   // console.log(playerScore++ +1);
-//   playerScreenScore.textContent = "Player: " + (playerScore++ +1);
-// }
-/////////////////////////////////////
+  // so we can call a function like this ALSO????????? maybe ask at odin?
+  // and how the hell it works without let??????
+  // playGame = playRound(playerSelection, computerSelection);
+  let playGame = playRound(playerSelection, computerSelection);
+
+// we need to play a round of a game first, then if function playRound() returned "draw!" then show draw at score instead of round. 
+
+  // check if it is a draw or not
+  if (playGame === "Draw!") {
+    return roundScreenScore.textContent = "Draw!";
+  } else {
+    roundScore++;
+    return roundScreenScore.textContent = "Round " + roundScore;
+  }
+
+});
 /////////////////////////////////////////////////////////////////////////////////////
-// paper
+// PAPER
 // add event listener to the paper image
 let buttonPaper = document.getElementById("button-paper");
 // add event listener to the paper image
@@ -60,11 +71,21 @@ buttonPaper.addEventListener("click", function() {
      const randomItem = Math.floor(Math.random() * items.length);
      return items[randomItem];
    }
-  console.log(playRound(playerSelection, computerSelection));
+    let playGame = playRound(playerSelection, computerSelection);
+
+// we need to play a round of a game first, then if function playRound() returned "draw!" then show draw at score instead of round. 
+
+  // check if it is a draw or not
+  if (playGame === "Draw!") {
+    return roundScreenScore.textContent = "Draw!";
+  } else {
+    roundScore++;
+    return roundScreenScore.textContent = "Round " + roundScore;
+  }
 });
 
 //////////////////////////////////////////////////////////////////
-// scissores
+// SCISSORS
 let buttonScissors = document.getElementById("button-scissors");
 // add event listener to the scissors image
 buttonScissors.addEventListener("click", function() {
@@ -77,24 +98,36 @@ buttonScissors.addEventListener("click", function() {
     const randomItem = Math.floor(Math.random() * items.length);
     return items[randomItem];
   }
- console.log(playRound(playerSelection, computerSelection));
+
+  let playGame = playRound(playerSelection, computerSelection);
+
+  // we need to play a round of a game first, then if function playRound() returned "draw!" then show draw at score instead of round. 
+  
+    // check if it is a draw or not
+    if (playGame === "Draw!") {
+      return roundScreenScore.textContent = "Draw!";
+    } else {
+      roundScore++;
+      return roundScreenScore.textContent = "Round " + roundScore;
+    }
 });
 
-let playerScreenScore = document.getElementById("player-score");
-let computerScreenScore = document.getElementById("computer-score");
+
+
 // play single round of a game between player and computer
 function playRound(playerSelection, computerSelection) {
 
   playerScreenScore.textContent = "Player: " + playerScore;
-
   computerScreenScore.textContent = "Computer: " + computerScore;
+  
+
       if (playerSelection === computerSelection) {
         return "Draw!";
       } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-        // give a score to the computer
+        // give a score to the computer first
         computerScore++;
-        // return "You Lose! Paper beats Rock!" + " Player vs PC = " + playerScore + ":" + computerScore;
         console.log("You Lose! Paper beats Rock!" + " Player vs PC = " + playerScore + ":" + computerScore)
+        // then return computerScore, after we were incremented it
         return computerScreenScore.textContent = "Computer: " + computerScore;
       } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
         // give a score to the player
