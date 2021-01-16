@@ -47,6 +47,7 @@ buttonRock.addEventListener("click", function() {
 
 // we need to play a round of a game first, then if function playRound() returned "draw!" then show draw at score instead of round. 
  checkForDraw(gameResult);
+ checkForScore(playerScore, computerScore);
 });
 
 
@@ -99,6 +100,16 @@ function checkForDraw(gameResult) {
 }
 }
 
+function checkForScore(playerScore, computerScore) {
+  if (playerScore >= 5) {
+    return roundScreenScore.textContent = "Player Win!";
+  } else if (computerScore >= 5) {
+    return roundScreenScore.textContent = "Computer Win!";
+  }
+
+}
+
+
 /////////////////////////////////////////////////////////////////////////////////////
 // PAPER
 // add event listener to the paper image
@@ -118,6 +129,7 @@ buttonPaper.addEventListener("click", function() {
 
    // we need to play a round of a game first, then if function playRound() returned "draw!" then show draw at score instead of round. 
     checkForDraw(gameResult);
+    checkForScore(playerScore, computerScore);
 });
 
 //////////////////////////////////////////////////////////////////
@@ -139,4 +151,5 @@ buttonScissors.addEventListener("click", function() {
 
 // we need to play a round of a game first, then if function playRound() returned "draw!" then show draw at score instead of round. 
  checkForDraw(gameResult);
+ checkForScore(playerScore, computerScore);
 });
